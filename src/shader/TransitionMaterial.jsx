@@ -19,7 +19,7 @@ export const TransitionMaterial = shaderMaterial(
     varying vec2 vUv;
 
     vec4 applyBrightnessContrast(vec4 color, float brightness, float contrast) {
-        color.rgb += brightness; // Adjust brightness
+        color.rgb += brightness;
         color.rgb = (color.rgb - 0.5) / (1.0 - contrast) + 0.5; 
         return color;
     }
@@ -27,6 +27,6 @@ export const TransitionMaterial = shaderMaterial(
     void main() {  
         vec2 uv = vUv; 
         vec4 _texture = texture2D(iTexture, uv);
-        gl_FragColor = _texture; 
+        gl_FragColor = applyBrightnessContrast(_texture, brightness, contrast);
     }`
 );

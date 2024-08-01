@@ -1,13 +1,12 @@
 import { Canvas } from "@react-three/fiber";
-import MeCamera from "../MeCamera/MeCamera";
 import { useState } from "react";
 
 import InteractiveMesh from "../InteractiveMesh/InteractiveMesh";
 import MeTeleport from "../MeTeleport/MeTeleport";
+import MeCamera from "../MeCamera/MeCamera";
 import Model from "../Model/Model";
 
 import s from './Experience.module.scss';
-
 export default function Experience() {
     const [modelRef, setModelRef] = useState(null);
     return (

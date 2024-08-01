@@ -7,7 +7,6 @@ import useLoading from '../../store/useLoading';
 import ModelGeometry from './ModelGeometry/ModelGeometry';
 
 export default function Model({ setModelRef }) {
-
     const panorams = usePanorams((state) => state.panorams);
     const setIsLoaded = useLoading((state) => state.setIsLoaded);
     const setLoadFile = useLoading((state) => state.setLoadFile);
